@@ -1,9 +1,6 @@
 # Topology-Informed Jet Tagging using Persistent Homology
 
-A scientific machine learning project exploring the use of **topological data analysis (TDA)** for quark–gluon jet classification. The pipeline transforms particle-jet point clouds into persistence images using persistent homology, then uses a convolutional neural network (CNN) to classify jets.
-
-**Paper:** [Topology-Informed Jet Tagging using Persistent Homology](https://arxiv.org/abs/2601.01450)  
-**Conference:** CHEP 2026, Bangkok
+A scientific machine learning project exploring the use of topological data analysis (TDA) for quark–gluon jet classification. The pipeline transforms particle-jet point clouds into persistence images using persistent homology, then uses a convolutional neural network (CNN) to classify jets.
 
 ## Overview
 
