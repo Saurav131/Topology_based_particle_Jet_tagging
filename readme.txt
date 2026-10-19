@@ -54,7 +54,7 @@ The training workflow includes:
 
 ## Repository structure
 
-```text
+
 .
 ├── Pre-processing.ipynb
 ├── Persistance_homology.ipynb
@@ -62,7 +62,6 @@ The training workflow includes:
 ├── Diagrams/
 ├── Diagrams.zip
 └── readme.txt
-```
 
 | File | Purpose |
 |---|---|
