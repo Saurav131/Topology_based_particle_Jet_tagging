@@ -12,8 +12,8 @@ The resulting persistence diagrams are converted into fixed-size persistence ima
 
 A central objective is to compare the discriminative information captured by two homology groups:
 
-- **\(H_0\):** Tracks connected components and their merging across filtration scales.
-- **\(H_1\):** Captures loop-like structures that emerge and disappear across filtration scales.
+- (H_0): Tracks connected components and their merging across filtration scales.
+- (H_1): Captures loop-like structures that emerge and disappear across filtration scales.
 
 The study finds that the two representations have comparable individual classification performance, while combining them improves validation performance.
 
@@ -31,11 +31,11 @@ The preprocessing workflow reads the HDF5 dataset, extracts jet labels and const
 
 ### 2. Persistent homology and persistence images
 
-For each jet, the constituent point cloud is processed using a Vietoris–Rips filtration. Persistent homology is computed using [`ripser`](https://github.com/scikit-tda/ripser), producing persistence diagrams for \(H_0\) and \(H_1\).
+For each jet, the constituent point cloud is processed using a Vietoris–Rips filtration. Persistent homology is computed using [`ripser`](https://github.com/scikit-tda/ripser), producing persistence diagrams for (H_0) and (H_1).
 
 The diagrams are transformed into fixed-size persistence images using [`persim`](https://github.com/scikit-tda/persim). The resulting images encode topological features in a representation suitable for conventional machine learning architectures.
 
-The implementation uses 40 × 40 pixel images for each homology group. The \(H_0\) and \(H_1\) representations can be combined to provide a two-channel input to the CNN.
+The implementation uses 40 × 40 pixel images for each homology group. The (H_0) and (H_1) representations can be combined to provide a two-channel input to the CNN.
 
 ### 3. CNN-based classification
 
@@ -94,9 +94,9 @@ A CUDA-compatible PyTorch installation can be used when a supported GPU is avail
 
 Run the notebooks in the following order:
 
-1. **Pre-processing:** Download the HLS4ML dataset and prepare the input data.
-2. **Persistent homology:** Generate \(H_0\) and \(H_1\) persistence images and save the feature arrays.
-3. **CNN training:** Load the saved arrays, train the classifier, and evaluate its performance.
+1. Pre-processing: Download the HLS4ML dataset and prepare the input data.
+2. Persistent homology: Generate (H_0) and (H_1) persistence images and save the feature arrays.
+3. CNN training: Load the saved arrays, train the classifier, and evaluate its performance.
 
 The persistence-image notebook saves `X_persistence.npy` and `y_labels.npy`, which are subsequently loaded by the CNN notebook.
 
